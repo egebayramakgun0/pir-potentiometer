@@ -1,0 +1,22 @@
+#include <Servo.h>
+Servo motor;
+int pirPin=9;
+int deger;
+
+void setup()
+{
+  motor.attach(8);
+  Serial.begin(9600);
+  pinMode (pirPin, INPUT);
+}
+
+void loop()
+{
+   deger=digitalRead(pirPin);
+  if (deger==HIGH)
+  {digitalWrite(8,HIGH);
+  }
+  
+  else {digitalWrite(8,LOW);
+ }
+}
